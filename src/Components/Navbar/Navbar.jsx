@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
 
@@ -48,7 +48,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+        <Link to="/" className="btn btn-ghost text-xl">
+          Gadget Heaven
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-2">{links}</ul>

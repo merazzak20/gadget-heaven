@@ -26,7 +26,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="">
-        <div className="bg-white p-8 rounded-lg w-1/2 -mt-56 mx-auto backdrop-blur-md">
+        <div className="border border-2 border-white p-5 rounded-lg w-1/2 -mt-56 mx-auto backdrop-blur-md">
           <img className=" mx-auto rounded-xl " src={bannerImg} alt="" />
         </div>
       </div>

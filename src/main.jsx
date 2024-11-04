@@ -9,7 +9,8 @@ import Home from "./Components/Home/Home.jsx";
 import Statistics from "./Components/Statistics/Statistics.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProductDetails from "./Components/ProductDetais/ProductDetails.jsx";
-const router = createBrowserRouter([
+import Products from "./Components/Products/Products.jsx";
+const routers = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
@@ -18,13 +19,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        children: [
+          {
+            path: "/categories/:category_name",
+            element: <Products></Products>,
+          },
+        ],
       },
+
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
       },
       {
         path: "/details/:product_id",
+
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch("products.json"),
+      },
+      {
+        path: "/:category_name",
 
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch("products.json"),
@@ -39,6 +53,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={routers} />
   </StrictMode>
 );
