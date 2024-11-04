@@ -1,0 +1,162 @@
+[
+  {
+    "category_name": "Tablets",
+    "product_id": 1,
+    "product_title": "Samsung Galaxy Tab S7",
+    "product_image": "https://i.ibb.co/K2yBjQC/ap6t2pi9l2tkdlpcigrr.jpg",
+    "price": 649.99,
+    "description": "The Galaxy Tab S7 features a high-resolution display and is perfect for productivity and entertainment.",
+    "Specification": [
+      "Display: 11 inches",
+      "Storage: 128GB",
+      "Camera: 13MP",
+      "Battery Life: Up to 15 hours"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 2,
+    "product_title": "OnePlus 9",
+    "product_image": "https://i.ibb.co/LZmGRzp/Morning-Mist-5167.jpg",
+    "price": 729.99,
+    "description": "The OnePlus 9 provides a flagship experience with fast charging and a stunning Fluid AMOLED display.",
+    "Specification": [
+      "Display: 6.55 inches",
+      "Storage: 128GB",
+      "Camera: 48MP",
+      "Battery: 4500mAh"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "category_name": "Laptops",
+    "product_id": 3,
+    "product_title": "Apple MacBook Air M1",
+    "product_image": "https://i.ibb.co/9WZxMXz/Mac-Boo-K-Air-M1-Gold-i-Stock-BD.webp",
+    "price": 899.99,
+    "description": "The MacBook Air with Apple M1 chip provides powerful performance and impressive battery life.",
+    "Specification": [
+      "Processor: Apple M1",
+      "RAM: 8GB",
+      "Storage: 256GB SSD",
+      "Display: 13.3 inches"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 4,
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://i.ibb.co/R7gdngJ/3412-69420.jpg",
+    "price": 999.99,
+    "description": "The iPhone 13 Pro offers cutting-edge technology with an advanced camera system and all-day battery life.",
+    "Specification": [
+      "Display: 6.1 inches",
+      "Storage: 256GB",
+      "Camera: Triple 12MP",
+      "Battery: 3095mAh"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 5,
+    "product_title": "Galaxy S21 Ultra",
+    "product_image": "https://i.ibb.co/KwNcGDB/2103-42632.jpg",
+    "price": 1199.99,
+    "description": "The Galaxy S21 Ultra features a stunning display and powerful performance with a versatile camera system.",
+    "Specification": [
+      "Display: 6.8 inches",
+      "Storage: 128GB",
+      "Camera: 108MP",
+      "Battery: 5000mAh"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "category_name": "Tablets",
+    "product_id": 6,
+    "product_title": "Apple iPad Pro 11",
+    "product_image": "https://i.ibb.co/qDwSdXZ/20221118-1668762404-729035.jpg",
+    "price": 799.99,
+    "description": "The iPad Pro 11 combines powerful performance with a stunning display and Apple Pencil support.",
+    "Specification": [
+      "Display: 11 inches",
+      "Storage: 128GB",
+      "Camera: 12MP",
+      "Battery Life: Up to 10 hours"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 7,
+    "product_title": "Google Pixel 6",
+    "product_image": "https://i.ibb.co/ctr05P7/Pixel-6-Pro.jpg",
+    "price": 599.99,
+    "description": "The Google Pixel 6 delivers exceptional photo quality and a smooth software experience.",
+    "Specification": [
+      "Display: 6.4 inches",
+      "Storage: 128GB",
+      "Camera: 50MP",
+      "Battery: 4614mAh"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "category_name": "Laptops",
+    "product_id": 8,
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co/VVPy4jV/Dell-XPS-13-Plus-BD-Price-1.webp",
+    "price": 999.99,
+    "description": "The Dell XPS 13 offers a sleek design with powerful performance and stunning InfinityEdge display.",
+    "Specification": [
+      "Processor: Intel i7",
+      "RAM: 16GB",
+      "Storage: 512GB SSD",
+      "Display: 13.4 inches"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 9,
+    "product_title": "Sony Xperia 1 III",
+    "product_image": "https://i.ibb.co/VM7Pm67/Sony-Xperia-1-II-Balck.jpg",
+    "price": 1299.99,
+    "description": "The Sony Xperia 1 III is designed for content creators with its pro-grade camera features and 4K HDR display.",
+    "Specification": [
+      "Display: 6.5 inches",
+      "Storage: 256GB",
+      "Camera: Triple 12MP",
+      "Battery: 4500mAh"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "category_name": "Smartphones",
+    "product_id": 10,
+    "product_title": "Xiaomi Mi 11",
+    "product_image": "https://i.ibb.co/BKg9GmF/images-2.jpg",
+    "price": 749.99,
+    "description": "The Xiaomi Mi 11 features a stunning AMOLED display and powerful performance at an affordable price.",
+    "Specification": [
+      "Display: 6.81 inches",
+      "Storage: 128GB",
+      "Camera: 108MP",
+      "Battery: 4600mAh"
+    ],
+    "availability": true,
+    "rating": 4.5
+  }
+]
