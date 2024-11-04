@@ -7,6 +7,22 @@ import { NavLink, useParams } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
+  const [ab, setAb] = useState([]);
+  const { category_name } = useParams();
+  console.log(typeof category_name);
+
+  useEffect(() => {
+    if (category_name) {
+      const filteredProduct = [...products].filter(
+        (pro) => pro.category_name === category_name
+      );
+      setAb(filteredProduct);
+    } else {
+      setAb(products);
+    }
+  }, [category_name, products]);
+
+  console.log(ab);
 
   useEffect(() => {
     fetch("products.json")
@@ -42,7 +58,7 @@ const Products = () => {
           </div>
         </div>
         <div className="col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, idx) => (
+          {ab.map((product, idx) => (
             <Product key={idx} product={product}></Product>
           ))}
         </div>
