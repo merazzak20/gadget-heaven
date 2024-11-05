@@ -9,7 +9,6 @@ const Products = () => {
   const [category, setCategory] = useState([]);
   const [ab, setAb] = useState([]);
   const { category_name } = useParams();
-  console.log(typeof category_name);
 
   useEffect(() => {
     if (category_name) {
@@ -42,14 +41,24 @@ const Products = () => {
         Explore Cutting-Edge Gadgets
       </h2>
       <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-gray-200 p-5 rounded-lg">
+        <div className=" p-5 rounded-lg">
           <p className="text-md font-bold mb-4">Category:</p>
-          <div role="tablist" className="flex flex-col gap-3 tabs tabs-boxed">
+          <div
+            role="tablist"
+            className="flex flex-col gap-3 tabs tabs-boxed p-5 "
+          >
+            <NavLink
+              to="/"
+              role="tab"
+              className="tab btn bg-[#9538E2] text-white"
+            >
+              All Categories
+            </NavLink>
             {category.map((category, idx) => (
               <NavLink
                 to={`/categories/${category.category_name}`}
                 role="tab"
-                className="tab"
+                className="tab btn bg-[#9538E2] text-white"
                 key={idx}
               >
                 {category.category_name}

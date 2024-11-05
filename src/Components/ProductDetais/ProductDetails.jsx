@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
+import { addToList, addToWhish } from "../Utility/addToDB";
 
 const ProductDetails = () => {
   const { product_id } = useParams();
@@ -16,6 +17,16 @@ const ProductDetails = () => {
     availability,
     rating,
   } = product;
+
+  const handleAddToCart = (id) => {
+    addToList(id);
+    console.log(2);
+  };
+  const handleAddToWhish = (id) => {
+    addToWhish(id);
+    console.log(3);
+  };
+
   return (
     <div className="w-full">
       <div className="info bg-[#9538E2] p-7 text-white mx-auto text-center py-24">
@@ -75,10 +86,16 @@ const ProductDetails = () => {
               </div>
               <p>{rating}</p>
             </div>
-            <button className="btn bg-[#9538E2] text-white rounded-full">
+            <button
+              onClick={() => handleAddToCart(product_id)}
+              className="btn bg-[#9538E2] text-white rounded-full"
+            >
               Add to Cart
             </button>
-            <button className="btn bg-white rounded-full ml-5">
+            <button
+              onClick={() => handleAddToWhish(product_id)}
+              className="btn bg-white rounded-full ml-5"
+            >
               <FaRegHeart />
             </button>
           </div>

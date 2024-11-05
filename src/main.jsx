@@ -10,6 +10,7 @@ import Statistics from "./Components/Statistics/Statistics.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProductDetails from "./Components/ProductDetais/ProductDetails.jsx";
 import Products from "./Components/Products/Products.jsx";
+import ListedProduct from "./Components/ListedProduct/ListedProduct.jsx";
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -36,14 +37,18 @@ const routers = createBrowserRouter([
         element: <Statistics></Statistics>,
       },
       {
+        path: "/listedItems",
+        element: <ListedProduct></ListedProduct>,
+      },
+      {
         path: "/details/:product_id",
-
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch("products.json"),
       },
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+        loader: () => fetch("products.json"),
       },
     ],
   },

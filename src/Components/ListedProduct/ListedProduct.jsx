@@ -1,11 +1,9 @@
 import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 const ListedProduct = () => {
-  return (
-    <div>
-      <h3>Listed Products: </h3>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default ListedProduct;

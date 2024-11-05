@@ -56,14 +56,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 space-x-2">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
-          <FaCartArrowDown />
-        </button>
-        <button className="btn btn-ghost btn-circle">
-          <div className="indicator">
-            <FaRegHeart />
-          </div>
-        </button>
+        <Link to="/dashboard">
+          <button className="btn btn-ghost btn-circle">
+            <FaCartArrowDown />
+          </button>
+        </Link>
+        <Link to="/dashboard">
+          <button className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <FaRegHeart />
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
   );
