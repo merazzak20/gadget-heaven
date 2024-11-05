@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
+import { getSelectedItems, getWhishList } from "../Utility/addToDB";
 
 const Navbar = () => {
+  const [cartNo, setCartNo] = useState(0);
+  const [wishNo, setWishNo] = useState(0);
+
+  useEffect(() => {
+    const noOfItems = getSelectedItems();
+    setCartNo(noOfItems.length);
+  }, []);
+
+  useEffect(() => {
+    const noOfItems = getWhishList();
+    setWishNo(noOfItems.length);
+  }, []);
+
   const location = useLocation();
   const backgroundColor =
     location.pathname === "/" ? "bg-[#9538E2]" : "bg-white";
@@ -19,10 +33,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
+      <li>
+        <NavLink to="/faq">FAQ</NavLink>
+      </li>
     </>
   );
   return (
-    <div className={`navbar ${backgroundColor} ${textColor} py-3`}>
+    <div className={`navbar ${backgroundColor} ${textColor} py-3 px-5`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,14 +74,16 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <Link to="/dashboard">
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost btn-circle bg-white text-[#9538E2] mr-3 ">
             <FaCartArrowDown />
+            <p>{cartNo}</p>
           </button>
         </Link>
         <Link to="/dashboard">
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost btn-circle bg-white text-[#9538E2]">
             <div className="indicator">
               <FaRegHeart />
+              <p>{wishNo}</p>
             </div>
           </button>
         </Link>

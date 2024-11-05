@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getSelectedItems = () => {
   const selectedItemsStr = localStorage.getItem("select-list");
   if (selectedItemsStr) {
@@ -11,12 +13,12 @@ const getSelectedItems = () => {
 const addToList = (id) => {
   const storeList = getSelectedItems();
   if (storeList.includes(id)) {
-    console.log("Already Exists");
+    toast.warn("Already Exists");
   } else {
     storeList.push(id);
     const selectedItemsStr = JSON.stringify(storeList);
     localStorage.setItem("select-list", selectedItemsStr);
-    console.log("Successfully Added");
+    toast.success("Successfully Added to Cart");
   }
 };
 
@@ -33,12 +35,12 @@ const getWhishList = () => {
 const addToWhish = (id) => {
   const storeList = getWhishList();
   if (storeList.includes(id)) {
-    console.log("Already Exists");
+    toast.warn("Already Exists");
   } else {
     storeList.push(id);
     const whishItemsStr = JSON.stringify(storeList);
     localStorage.setItem("whish-list", whishItemsStr);
-    console.log("Successfully Added");
+    toast.success("Successfully Added to Wishlist");
   }
 };
 

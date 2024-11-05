@@ -6,12 +6,26 @@ import "react-tabs/style/react-tabs.css";
 import { getSelectedItems, getWhishList } from "../Utility/addToDB";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
+import { CartContext } from "../Root/Root";
 
 const Dashboard = () => {
   const [cartList, setCartList] = useState([]);
   const [wishList, setWishList] = useState([]);
+  const [sort, setSort] = useState("");
   const items = useLoaderData();
+  const [price, setPrice] = useState(0);
 
+  // Total Price
+  useEffect(() => {
+    const pro = [...cartList];
+    const pr = pro.reduce(
+      (accumulator, product) => accumulator + product.price,
+      0
+    );
+    setPrice(pr);
+  }, [cartList]);
+
+  // Cart Items
   useEffect(() => {
     const storeItems = getSelectedItems();
     const storeItemsInt = storeItems.map((id) => parseInt(id));
@@ -21,6 +35,7 @@ const Dashboard = () => {
     setCartList(list);
   }, []);
 
+  // Wish Items
   useEffect(() => {
     const wishItems = getWhishList();
     const wishItemsInt = wishItems.map((id) => parseInt(id));
@@ -28,6 +43,15 @@ const Dashboard = () => {
     setWishList(list);
     const wishNumber = wishList.length;
   }, []);
+
+  const handleSort = () => {
+    const copyCartList = [...cartList].sort((a, b) => a.price - b.price);
+    setCartList(copyCartList);
+  };
+
+  const handleSentNumber = () => {
+    setData(wishList.length);
+  };
   return (
     <div>
       <Helmet>
@@ -43,16 +67,23 @@ const Dashboard = () => {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
+        <div className="mt-6">
+          <p className="text-md font-bold">Price: {price}</p>
+          <div className="space-x-4 mt-3">
+            <button onClick={handleSort} className="btn">
+              Sort
+            </button>
+            <button className="btn">Purches</button>
+          </div>
+        </div>
       </div>
+
       <Tabs>
         <TabList className="flex gap-5 mb-5 mx-auto justify-center bg-[#9538E2] py-5">
           <Tab className="btn rounded-full">Cart List</Tab>
           <Tab className="btn rounded-full">Whish List</Tab>
         </TabList>
-        {/* <div>
-          <p>Price: 0</p>
-          <button>Sort</button>
-        </div> */}
+
         <TabPanel>
           <h2>Carts: {cartList.length}</h2>
           {cartList.map((cart, idx) => (

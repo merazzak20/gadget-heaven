@@ -11,6 +11,9 @@ import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProductDetails from "./Components/ProductDetais/ProductDetails.jsx";
 import Products from "./Components/Products/Products.jsx";
 import ListedProduct from "./Components/ListedProduct/ListedProduct.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import FAQ from "./Components/FAQ/FAQ.jsx";
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +44,10 @@ const routers = createBrowserRouter([
         element: <ListedProduct></ListedProduct>,
       },
       {
+        path: "/faq",
+        element: <FAQ></FAQ>,
+      },
+      {
         path: "/details/:product_id",
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch("products.json"),
@@ -57,5 +64,6 @@ const routers = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={routers} />
+    <ToastContainer />
   </StrictMode>
 );

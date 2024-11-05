@@ -1,4 +1,3 @@
-import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { addToList, addToWhish } from "../Utility/addToDB";
