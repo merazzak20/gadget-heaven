@@ -68,7 +68,7 @@ const Dashboard = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="mt-6">
-          <p className="text-md font-bold">Price: {price}</p>
+          <p className="text-md font-bold">Price: {price.toFixed(2)}</p>
           <div className="space-x-4 mt-3">
             <button onClick={handleSort} className="btn">
               Sort
