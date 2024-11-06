@@ -15,8 +15,6 @@ Gadget Heaven is your ultimate destination for top-tier electronic gadgets, offe
 
 ## Here I used Local Storage for managing and handling data
 
-(https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/cb107cb186465d2189e83f743d16aa13a0cb206e/Batch-10_Assignment-08.pdf)
-
 ## 5 features of this website
 
 1. **Product Browsing & Filtering**
