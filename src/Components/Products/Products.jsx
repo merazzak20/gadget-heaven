@@ -21,8 +21,6 @@ const Products = () => {
     }
   }, [category_name, products]);
 
-  console.log(ab);
-
   useEffect(() => {
     fetch("products.json")
       .then((res) => res.json())

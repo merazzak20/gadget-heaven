@@ -1,8 +1,10 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { addToList, addToWhish } from "../Utility/addToDB";
+import { useState } from "react";
 
 const ProductDetails = () => {
+  const [status, setStatus] = useState(false);
   const { product_id } = useParams();
   const id = parseInt(product_id);
   const data = useLoaderData();
@@ -19,11 +21,13 @@ const ProductDetails = () => {
 
   const handleAddToCart = (id) => {
     addToList(id);
-    console.log(2);
   };
   const handleAddToWhish = (id) => {
     addToWhish(id);
-    console.log(3);
+  };
+
+  const handeDisable = () => {
+    setStatus(true);
   };
 
   return (
@@ -92,8 +96,16 @@ const ProductDetails = () => {
               Add to Cart
             </button>
             <button
-              onClick={() => handleAddToWhish(product_id)}
-              className="btn bg-white rounded-full ml-5"
+              onClick={() => {
+                handleAddToWhish(product_id);
+                handeDisable();
+              }}
+              className={`${
+                status
+                  ? "bg-gray-400 cursor-not-allowed   opacity-75"
+                  : "bg-white"
+              } btn bg-white rounded-full ml-5`}
+              disabled={status}
             >
               <FaRegHeart />
             </button>

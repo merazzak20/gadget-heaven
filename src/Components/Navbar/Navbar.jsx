@@ -10,7 +10,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const noOfItems = getSelectedItems();
-    setCartNo(noOfItems.length);
+    const len = noOfItems.length;
+    setCartNo(len);
   }, []);
 
   useEffect(() => {

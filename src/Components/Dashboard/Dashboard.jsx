@@ -41,17 +41,16 @@ const Dashboard = () => {
     const wishItemsInt = wishItems.map((id) => parseInt(id));
     const list = items.filter((item) => wishItemsInt.includes(item.product_id));
     setWishList(list);
-    const wishNumber = wishList.length;
   }, []);
 
   const handleSort = () => {
-    const copyCartList = [...cartList].sort((a, b) => a.price - b.price);
+    const copyCartList = [...cartList].sort((a, b) => b.price - a.price);
     setCartList(copyCartList);
   };
 
-  const handleSentNumber = () => {
-    setData(wishList.length);
-  };
+  // const handleSentNumber = () => {
+  //   setData(wishList.length);
+  // };
   return (
     <div>
       <Helmet>
